@@ -1,0 +1,34 @@
+library(RcmdrPlugin.IPSUR)
+data(RcmdrTestDrive)
+Perform the below operations:
+1. Compute the measures of central tendency for salary and reduction which variable has highest center?
+
+Solution:
+
+library(RcmdrPlugin.IPSUR)
+RcmdrTestDrive
+# Histogram of salary shows bell shaped symetric distribution so the best measure of center should be the mean
+hist(RcmdrTestDrive$salary)
+# Histogram of reduction shows right skewed distribution so the best measure of center should be median
+hist(RcmdrTestDrive$reduction)
+# Finding the Mean of salary & Median of reduction
+mean(RcmdrTestDrive$salary)
+median(RcmdrTestDrive$reduction)
+
+
+Compairing both salary and reduction, salary has the highest center
+
+
+
+2. Which measure of center is more appropriate for before and after?
+
+Solution:
+
+# By plotting the histogram we can check the distribution
+# Bell shaped symmetric distribution for before we need to calculate mean
+hist(RcmdrTestDrive$before)
+mean(RcmdrTestDrive$before)
+
+# Left skewed symmetric distribution for after we need to calcualte medain
+hist(RcmdrTestDrive$after)
+median(RcmdrTestDrive$after)
